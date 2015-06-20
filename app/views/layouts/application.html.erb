@@ -8,6 +8,8 @@
 </head>
 <body>
 
+	<%= render 'layouts/header' %>
+
 	<div class="container">
 		<% flash.each do |message_type, message| %>
 			<div id="flash" class="flash-<%= message_type %>"><%= message %></div>

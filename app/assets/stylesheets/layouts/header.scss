@@ -1,0 +1,104 @@
+$white: #fff;
+
+.navigation {
+  $large-screen: em(860) !default;
+  $large-screen: $large-screen;
+  padding-bottom: 1px;
+
+  // Mobile view
+  .navigation-menu-button {
+    display: block;
+    float: right;
+    margin: 0;
+    padding-top: 0.5em;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .navigation-wrapper {
+    @include clearfix;
+    position: relative;
+    padding: 15px 25px 15px 25px;
+    @include linear-gradient(#0078D7, #2680C7)
+  }
+
+  .logo {
+    float: left;
+
+    a{
+      font-size: 1.5em;
+      padding: 9px;
+      font-weight: 500;
+      cursor: pointer;
+      color: $white;
+      @include transition-property(border);
+      @include transition-duration(0.5s);
+      @include transition-timing-function(ease-in);
+    }
+  }
+
+
+  nav {
+    float: none;
+
+    @include media ($large-screen) {
+      float: right;
+      line-height: 1.5em;
+      padding-top: 0.3em;
+    }
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    @include media ($large-screen) {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  // Nav items
+  ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    a{
+      color: tint(#2680C7, 80%);
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    @include media ($large-screen) {
+      background: transparent;
+      display: inline;
+      text-decoration: none;
+      width: auto;
+    }
+  }
+
+  li.nav-link a {
+    display: inline-block;
+
+    @include media ($large-screen) {
+      padding-right: 1em;
+    }
+  }
+}
+
+
