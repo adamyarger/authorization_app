@@ -4,7 +4,9 @@
 <td>
   <%= form_for(user) do |f| %>
     <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>
-    <%= f.submit 'Change Role', :class => 'button-xs' %>
+    <td>
+    <button><%= f.submit 'Change Role' %></button>
+    </td>
   <% end %>
 </td>
 <td>

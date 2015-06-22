@@ -1,16 +1,15 @@
-<div class="container">
-  <div class="row">
-    <h3>Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+<div class="bigbox">
+  <div class="box">
+    <table class="table-minimal">
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <%= render user %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
+
+

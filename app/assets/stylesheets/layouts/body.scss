@@ -1,0 +1,8 @@
+.bigbox {
+	@include outer-container;
+}
+
+.box {
+	@include span-columns(8);
+	@include shift(2);
+}
