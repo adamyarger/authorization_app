@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'User profile page', :devise do
-
   scenario 'user sees own profile' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
@@ -18,5 +17,4 @@ feature 'User profile page', :devise do
     visit user_path(other)
     expect(page).to have_content 'Access denied.'
   end
-
 end
