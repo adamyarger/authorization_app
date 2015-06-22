@@ -1,7 +1,12 @@
 FactoryGirl.define do
   factory :user do
-    email {Faker::Internet.email}
-    password "12345678"
-    password_confirmation "12345678"
+    name "Test User"
+    email "test@example.com"
+    password "please123"
+
+    trait :admin do
+      role 'admin'
+    end
+
   end
 end
